@@ -1,1 +1,1 @@
-export const PREFIX = "";
+export const PREFIX = "/Pycon-APAC-2024-Static";

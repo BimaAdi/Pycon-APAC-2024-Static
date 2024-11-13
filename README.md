@@ -12,3 +12,4 @@ Pycon APAC 2024 website in static mode.
 ## Deployment
 - build project to docs folder `pnpm run build`
 - push changes to github repository branch main
+- open on github pages url https://bimaadi.github.io/Pycon-APAC-2024-Static/
