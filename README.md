@@ -7,7 +7,10 @@ Pycon APAC 2024 website in static mode.
 
 ## Installation
 - install depedencies `pnpm install`
+- change vite.config.ts key base to `/{github repository name}`
+- change ./src/settings.ts PREFIX = `/{github repository name}` (must be same with vite.config.ts)
 - run in development mode `pnpm run dev`
+- Open http://localhost:5173/{github repository name}
 
 ## Deployment
 - build project to docs folder `pnpm run build`

@@ -8,6 +8,7 @@ import { twMerge } from "tailwind-merge";
 import { LogoutButton } from "./LogoutButton";
 import { MyDashboardButton } from "./MyDashboardButton";
 import { MyTicketButton } from "./MyTicketButton";
+import { PREFIX } from "~/settings";
 
 export const Navbar = ({ isLogin = false }: { isLogin?: boolean }) => {
 	const [showBar, setShowBar] = useState(false);
@@ -48,10 +49,10 @@ export const Navbar = ({ isLogin = false }: { isLogin?: boolean }) => {
 								<Link to="/dashboard/my-account">My Account</Link>
 							</li> */}
 							<li>
-								<Link to="/dashboard/profile">My Dashboard</Link>
+								<Link to={`${PREFIX}/dashboard/profile`}>My Dashboard</Link>
 							</li>
 							<li>
-								<Link to="/dashboard/my-ticket">My Ticket</Link>
+								<Link to={`${PREFIX}/dashboard/my-ticket`}>My Ticket</Link>
 							</li>
 						</>
 					) : (
@@ -67,19 +68,19 @@ export const Navbar = ({ isLogin = false }: { isLogin?: boolean }) => {
 					)}
 					<hr />
 					<li>
-						<Link to="/">Home</Link>
+						<Link to={`${PREFIX}/`}>Home</Link>
 					</li>
 					<li>
-						<Link to="/schedule">Schedule</Link>
+						<Link to={`${PREFIX}/schedule`}>Schedule</Link>
 					</li>
 					<li>
-						<Link to="/ticket">Ticket</Link>
+						<Link to={`${PREFIX}/ticket`}>Ticket</Link>
 					</li>
 					<li>
-						<Link to="/code-of-conduct">Code of Conduct</Link>
+						<Link to={`${PREFIX}/code-of-conduct`}>Code of Conduct</Link>
 					</li>
 					<li>
-						<Link to="/news">News</Link>
+						<Link to={`${PREFIX}/news`}>News</Link>
 					</li>
 				</ul>
 			</nav>
@@ -90,34 +91,34 @@ export const Navbar = ({ isLogin = false }: { isLogin?: boolean }) => {
 						<PyconLogo />
 					</li>
 					<li>
-						<Link to="/">Home</Link>
+						<Link to={`${PREFIX}/`}>Home</Link>
 					</li>
 					<li>
-						<Link to="/schedule">Schedule</Link>
+						<Link to={`${PREFIX}/schedule`}>Schedule</Link>
 					</li>
 					{/* <li>Our Speakers</li> */}
 					<li>
-						<Link to="/ticket">Ticket</Link>
+						<Link to={`${PREFIX}/ticket`}>Ticket</Link>
 					</li>
 					<li>
-						<Link to="/code-of-conduct">Code of Conduct</Link>
+						<Link to={`${PREFIX}/code-of-conduct`}>Code of Conduct</Link>
 					</li>
 					{/* <li>Sponsorship</li> */}
 					{/* <li>Organizer</li> */}
 					<li>
-						<Link to="/news">News</Link>
+						<Link to={`${PREFIX}/news`}>News</Link>
 					</li>
 				</ul>
 				<div className="flex gap-5 justify-end items-center">
 					{isLogin ? (
 						<>
-							<Link to="/dashboard/profile">
+							<Link to={`${PREFIX}/dashboard/profile`}>
 								<MyDashboardButton />
 							</Link>
 							{/* <Link to="/dashboard/my-account">
 								<MyAccountButton />
 							</Link> */}
-							<Link to="/dashboard/my-ticket">
+							<Link to={`${PREFIX}/dashboard/my-ticket`}>
 								<MyTicketButton />
 							</Link>
 							<LogoutButton

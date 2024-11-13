@@ -2,15 +2,15 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root";
+import Index from "./routes/_index";
 import { PREFIX } from "./settings";
-import NotFound from "./routes/not-found";
+import NotFoundPage from "./routes/$";
 
 const router = createBrowserRouter([
 	{
 		path: `${PREFIX}/`,
-		element: <Root />,
-		errorElement: <NotFound />,
+		element: <Index />,
+		errorElement: <NotFoundPage />,
 	},
 ]);
 
