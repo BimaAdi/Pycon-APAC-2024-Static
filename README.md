@@ -13,6 +13,8 @@ Pycon APAC 2024 website in static mode.
 - Open http://localhost:5173/{github repository name}
 
 ## Deployment
+- On your github repository open Settings > Pages > Build and deployment
+- set Source = "Deploy from a branch" , On Branch select branch = main, select folder = /docs
 - build project to docs folder `pnpm run build`
 - push changes to github repository branch main
 - open on github pages url https://bimaadi.github.io/Pycon-APAC-2024-Static/

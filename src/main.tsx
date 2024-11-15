@@ -5,12 +5,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./routes/_index";
 import { PREFIX } from "./settings";
 import NotFoundPage from "./routes/$";
+import TicketPage, { loader as ticketPageLoader } from "./routes/ticket";
 
 const router = createBrowserRouter([
 	{
 		path: `${PREFIX}/`,
 		element: <Index />,
 		errorElement: <NotFoundPage />,
+	},
+	{
+		path: `${PREFIX}/ticket/`,
+		element: <TicketPage />,
+		loader: ticketPageLoader,
+		errorElement: <NotFoundPage />,
+	},
+	{
+		path: "*",
+		element: <NotFoundPage />,
 	},
 ]);
 
