@@ -6,6 +6,7 @@ import Index from "./routes/_index";
 import { PREFIX } from "./settings";
 import NotFoundPage from "./routes/$";
 import TicketPage, { loader as ticketPageLoader } from "./routes/ticket";
+import SchedulePage, { loader as schedulePageLoader } from "./routes/schedule";
 
 const router = createBrowserRouter([
 	{
@@ -17,6 +18,12 @@ const router = createBrowserRouter([
 		path: `${PREFIX}/ticket/`,
 		element: <TicketPage />,
 		loader: ticketPageLoader,
+		errorElement: <NotFoundPage />,
+	},
+	{
+		path: `${PREFIX}/schedule/`,
+		element: <SchedulePage />,
+		loader: schedulePageLoader,
 		errorElement: <NotFoundPage />,
 	},
 	{
