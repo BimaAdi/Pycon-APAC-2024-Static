@@ -7,6 +7,8 @@ import { PREFIX } from "./settings";
 import NotFoundPage from "./routes/$";
 import TicketPage, { loader as ticketPageLoader } from "./routes/ticket";
 import SchedulePage, { loader as schedulePageLoader } from "./routes/schedule";
+import NewsPage from "./routes/news";
+import NewsDetailPage from "./routes/news.pycon-apac-24-cfp-accepted-proposals-batch-1-3";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
 		path: `${PREFIX}/schedule/`,
 		element: <SchedulePage />,
 		loader: schedulePageLoader,
+		errorElement: <NotFoundPage />,
+	},
+	{
+		path: `${PREFIX}/news/`,
+		element: <NewsPage />,
+		errorElement: <NotFoundPage />,
+	},
+	{
+		path: `${PREFIX}/news/pycon-apac-24-cfp-accepted-proposals-batch-1-3/`,
+		element: <NewsDetailPage />,
 		errorElement: <NotFoundPage />,
 	},
 	{

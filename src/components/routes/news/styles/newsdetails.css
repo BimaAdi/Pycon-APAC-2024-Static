@@ -1,0 +1,19 @@
+.news p {
+	font-size: 18px;
+	color: #333333;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.news ol {
+	padding-left: 10px;
+	list-style-type: decimal;
+	list-style-position: inside;
+	color: red;
+}
+
+.news ol li {
+	display: list-item;
+	font-size: 18px;
+	color: #333333;
+}
