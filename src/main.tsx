@@ -9,6 +9,7 @@ import TicketPage, { loader as ticketPageLoader } from "./routes/ticket";
 import SchedulePage, { loader as schedulePageLoader } from "./routes/schedule";
 import NewsPage from "./routes/news";
 import NewsDetailPage from "./routes/news.pycon-apac-24-cfp-accepted-proposals-batch-1-3";
+import CodeOfConductPage from "./routes/code-of-conduct";
 
 const router = createBrowserRouter([
 	{
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
 		path: `${PREFIX}/schedule/`,
 		element: <SchedulePage />,
 		loader: schedulePageLoader,
+		errorElement: <NotFoundPage />,
+	},
+	{
+		path: `${PREFIX}/code-of-conduct/`,
+		element: <CodeOfConductPage />,
 		errorElement: <NotFoundPage />,
 	},
 	{
